@@ -1,0 +1,40 @@
+{
+    "version": "0.0.1",
+    "pluginName": "Edge 小助手",
+    "description": "Microsoft Edge 小助手",
+    "author": "Licardo",
+    "homepage": "https://github.com/L1cardo/Edge-Helper-uTools",
+    "preload": "preload.js",
+    "logo": "logo.png",
+    "features": [
+        {
+            "platform": ["darwin", "win32"],
+            "code": "inprivate_mode",
+            "explain": "Edge InPrivate窗口打开当前URL",
+            "cmds": [{
+                "type": "window",
+                "match": {
+                   "app": "/^(?:Microsoft 暂不支持Edge|ms暂不支持edge\\.exe)$/"
+                },
+                "label": "InPrivate窗口打开"
+            }]
+        },
+        {
+            "code": "edge_bookmarks",
+            "explain": "Edge 书签搜索",
+            "cmds": ["Edge BookMarks", "Edge 书签"]
+        },
+        {
+            "platform": "darwin",
+            "code": "opened_tabs",
+            "explain": "列出所有 Edge 浏览器已打开的标签页",
+            "cmds": [{
+                "type": "window",
+                "match": {
+                   "app": "Microsoft Edge"
+                },
+                "label": "所有标签页"
+            }]
+        }
+    ]
+}
