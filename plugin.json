@@ -6,15 +6,14 @@
     "homepage": "https://github.com/L1cardo/Edge-Helper-uTools",
     "preload": "preload.js",
     "logo": "logo.png",
-    "features": [
-        {
+    "features": [{
             "platform": ["darwin", "win32"],
             "code": "inprivate_mode",
             "explain": "Edge InPrivate窗口打开当前URL",
             "cmds": [{
                 "type": "window",
                 "match": {
-                   "app": "/^(?:Microsoft 暂不支持Edge|ms暂不支持edge\\.exe)$/"
+                    "app": ["Microsoft Edge.app","msedge.exe"]
                 },
                 "label": "InPrivate窗口打开"
             }]
@@ -22,7 +21,16 @@
         {
             "code": "edge_bookmarks",
             "explain": "Edge 书签搜索",
-            "cmds": ["Edge BookMarks", "Edge 书签"]
+            "cmds": [
+                "Edge BookMarks", "Edge 书签",
+                {
+                    "type": "window",
+                    "match": {
+                        "app": ["Microsoft Edge.app", "msedge.exe"]
+                    },
+                    "label": "Edge 书签搜索"
+                }
+            ]
         },
         {
             "platform": "darwin",
@@ -31,7 +39,7 @@
             "cmds": [{
                 "type": "window",
                 "match": {
-                   "app": "Microsoft Edge"
+                    "app": ["Microsoft Edge.app","msedge.exe"]
                 },
                 "label": "所有标签页"
             }]
