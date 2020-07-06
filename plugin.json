@@ -1,5 +1,5 @@
 {
-    "version": "0.0.1",
+    "version": "0.0.2",
     "pluginName": "Edge 小助手",
     "description": "Microsoft Edge 小助手",
     "author": "Licardo",
@@ -19,6 +19,7 @@
             }]
         },
         {
+            "platform": ["darwin", "win32"],
             "code": "edge_bookmarks",
             "explain": "Edge 书签搜索",
             "cmds": [
